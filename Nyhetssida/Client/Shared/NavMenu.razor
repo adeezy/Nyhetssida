@@ -1,0 +1,46 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Nyhetssida</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <AuthorizeView>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Admin" Match="NavLinkMatch.All">
+                <span class="oi oi-person" aria-hidden="true"></span> Admin
+            </NavLink>
+        </div>
+        </AuthorizeView>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="svd">
+                <span class="oi oi-paperclip" aria-hidden="true"></span> SvD
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="expressen">
+                <span class="oi oi-paperclip" aria-hidden="true"></span> Expressen
+            </NavLink>
+        </div>     
+         <div class="nav-item px-3">
+            <NavLink class="nav-link" href="nt">
+                <span class="oi oi-paperclip" aria-hidden="true"></span> NT
+            </NavLink>
+        </div>   
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

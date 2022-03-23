@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "824a8abf-4439-4ee1-a334-692c057ffb98": {
+      "ProjectGuid": "824a8abf-4439-4ee1-a334-692c057ffb98",
+      "DisplayName": "Nyhetssida.Server",
+      "ColorIndex": 0
+    },
+    "91bb880b-1993-49fa-ba2b-78bfeb1ba183": {
+      "ProjectGuid": "91bb880b-1993-49fa-ba2b-78bfeb1ba183",
+      "DisplayName": "Nyhetssida.Client",
+      "ColorIndex": 1
+    },
+    "3e8e9c3f-0a8d-4946-b5bc-195e6cffdaeb": {
+      "ProjectGuid": "3e8e9c3f-0a8d-4946-b5bc-195e6cffdaeb",
+      "DisplayName": "Nyhetssida.Shared",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 3
+}

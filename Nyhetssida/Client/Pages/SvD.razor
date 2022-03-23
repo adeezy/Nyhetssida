@@ -1,0 +1,48 @@
+﻿@page "/svd"
+@using Nyhetssida.Shared
+@inject HttpClient Http
+
+<PageTitle>SvD</PageTitle>
+
+<h1>SvD</h1>
+
+
+@if (posts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+  
+
+    @foreach (var post in posts)
+    {
+         var postUrl = "Category/" + @post.Category;
+
+         <div class="col-md-6 list-group-item">
+            <a href="@post.Link" target="_blank">
+                <h5 class="mb-1">@post.Titel</h5>
+            </a>
+            <div class="col-md-4">
+                <p class="mb-1">@post.Description</p>
+                <small>@post.PubDate</small>
+            </div>
+            @if (post.Category != string.Empty)
+            {
+                <NavLink href="@postUrl" target="_blank">@post.Category</NavLink>
+           @*     <a href="/cateogry/@post.Category"> Kategori: @post.Category</a>*@
+              @*  <small> Kategori: @post.Category</small>*@
+            }
+            <small> Källa: @post.Source</small>
+
+        </div>
+    }
+}
+@code {
+    private List<Post>? posts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        posts = await Http.GetFromJsonAsync<List<Post>>("SvD");
+    }
+}

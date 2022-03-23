@@ -1,0 +1,52 @@
+﻿@page "/Admin"
+@using Nyhetssida.Shared
+@inject HttpClient Http
+
+<PageTitle>Admin</PageTitle>
+
+<h1>Admin</h1>
+
+<EditForm class="col-md-6" Model="@source" OnSubmit="@HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <label>Källa</label>
+    <InputText class="form-control" @bind-Value="source.NewsSource" />
+    <button onclick="" class="btn btn-success" type="submit">Lägg till källa</button>
+</EditForm>
+
+@if (sources == null)
+{
+    <label>Inga källor</label>
+}
+else
+{
+    <table>
+        @foreach (var source in sources)
+        {
+            <tr>
+                <th>Källa:</th>
+            </tr>
+            <tr>
+                <td>@source.NewsSource</td>
+            </tr>
+        }
+    </table>
+}
+@code {
+
+    private Source source = new Source();
+
+    private List<Source> sources = new List<Source>();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        sources = await Http.GetFromJsonAsync<List<Source>>("Admin");
+    }
+
+    private async Task HandleSubmit()
+    {
+        await Http.PostAsJsonAsync<Source>("Admin", source);
+        OnInitializedAsync();
+    }
+}

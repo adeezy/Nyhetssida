@@ -1,0 +1,38 @@
+﻿@page "/nt"
+@using Nyhetssida.Shared
+@inject HttpClient Http
+
+<PageTitle>NT</PageTitle>
+
+<h1>NT</h1>
+
+
+@if (posts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var post in posts)
+    {
+         <div class="col-md-6 list-group-item">
+            <a href="@post.Link" target="_blank">
+                <h5 class="mb-1">@post.Titel</h5>
+            </a>
+            <div class="col-md-4">
+                <p class="mb-1">@post.Description</p>
+                <small>@post.PubDate</small>
+            </div>
+            <small> Källa: @post.Source</small>
+
+        </div>
+    }
+}
+@code {
+    private List<Post>? posts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        posts = await Http.GetFromJsonAsync<List<Post>>("nt");
+    }
+}

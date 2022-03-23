@@ -1,0 +1,12 @@
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\bin\Debug\net6.0\Nyhetssida.Shared.deps.json
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\bin\Debug\net6.0\Nyhetssida.Shared.dll
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\bin\Debug\net6.0\ref\Nyhetssida.Shared.dll
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\bin\Debug\net6.0\Nyhetssida.Shared.pdb
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\obj\Debug\net6.0\Nyhetssida.Shared.GlobalUsings.g.cs
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\obj\Debug\net6.0\Nyhetssida.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\obj\Debug\net6.0\Nyhetssida.Shared.AssemblyInfoInputs.cache
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\obj\Debug\net6.0\Nyhetssida.Shared.AssemblyInfo.cs
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\obj\Debug\net6.0\Nyhetssida.Shared.csproj.CoreCompileInputs.cache
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\obj\Debug\net6.0\Nyhetssida.Shared.dll
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\obj\Debug\net6.0\ref\Nyhetssida.Shared.dll
+C:\Users\aden_\source\repos\Nyhetssida\Nyhetssida\Shared\obj\Debug\net6.0\Nyhetssida.Shared.pdb
